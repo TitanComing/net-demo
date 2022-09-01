@@ -33,6 +33,7 @@ public class ServiceHandler extends Thread {
         writer.flush();
         for (;;) {
             String s = reader.readLine();
+            System.out.println("server get req: " + s);
             if (s.equals("bye")) {
                 writer.write("bye\n");
                 writer.flush();
@@ -40,6 +41,7 @@ public class ServiceHandler extends Thread {
             }
             writer.write("ok: " + s + "\n");
             writer.flush();
+            System.out.println("server put resp: " + "ok: " + s + "\n");
         }
     }
 }
