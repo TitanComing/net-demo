@@ -178,7 +178,7 @@ public class SpxClient {
 
     public static void main(String[] args) throws Exception {
         String output = "R|00b0d07abcb0|01|36|003|1| |00181215||1|";
-        final SpxClient client = new SpxClient("10.46.32.13", 17991);
+        final SpxClient client = new SpxClient("localhost", 12345);
 
         if (client.connect()) {
             log.info("重新连接到spx网关......");
